@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "anilak1-8868"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "anilak1-8868"
+  template:
+    metadata:
+      labels:
+        app: "anilak1-8868"
+    spec:
+      containers:
+        - name: "anilak1-8868"
+          image: "azccr1.azurecr.io/anilak1"
+          ports:
+          - containerPort: 245
